@@ -19,6 +19,7 @@
       # Runs when a workspace is (re)started
       onStart = {
         run-server = "dotnet watch --urls=http://localhost:3000";
+                    
       };
     };{% endif %}{% if environment == "blazor" %}
     # Enable previews and customize configuration
@@ -28,7 +29,7 @@
         web = {
           command = [
             "dotnet"
-            "watch"
+            "run"
             "--urls=http://localhost:$PORT"
           ];
           manager = "web";
