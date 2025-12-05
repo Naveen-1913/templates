@@ -1,6 +1,6 @@
 { pkgs, environment ? "blazor", ... }: {
-  channel = "stable-24.11";
-  packages = [ pkgs.dotnet-sdk_8 pkgs.j2cli pkgs.nixfmt ];
+  channel = "stable-25.05";
+  packages = [ pkgs.dotnet-sdk pkgs.j2cli pkgs.nixfmt ];
   bootstrap = ''
     export HOME=/home/user
     dotnet new ${environment} -o "$WS_NAME"
